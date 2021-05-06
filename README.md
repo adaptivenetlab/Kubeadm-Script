@@ -6,30 +6,30 @@ setup Kubernetes Version 1.21.0 cluster on CentOS 7.
 
 1 worker node (IP = 192.168.100.209)
 
-## On both master and worker
+## On both master and worker (master node and worker node)
 ```bash
 sudo su
 yum -y update
 yum -y install git
 ```
 
-## Edit hostname on master node and change the name to master
+## Edit hostname on master node and change the name to master (master node)
 ```bash
 sudo su
 vi /etc/hostname
 ```
 
-## Edit hostname on worker node and change the name to worker
+## Edit hostname on worker node and change the name to worker (worker node)
 ```bash
 sudo su
 vi /etc/hostname
 ```
 
-## Add known host on master node and worker node (Use your IP)
+## Add known host on master node and worker node (Use your IP) 
 ```bash
 vi /etc/hosts
 ```
-## Add this to /etc/hosts of master node and worker node
+## Add this to /etc/hosts of master node and worker node (master node and worker node)
 ```bash
 192.168.100.208 master
 192.168.100.209 worker
@@ -44,18 +44,18 @@ sudo visudo
 ```bash
 centos  ALL=(ALL) NOPASSWD:ALL
 ```
-## Clone the repository on master node and worker node
+## Clone the repository on master node and worker node (master node and worker node)
 ```bash
 sudo su
 git clone https://github.com/daus2936/kubeadm-script.git
 ```
-## Give execute permission to the script file on master node and worker node
+## Give execute permission to the script file on master node and worker node (master node and worker node)
 ```bash
 cd kubeadm-script
 chmod +x ccluster.sh kubernetes.sh variable.sh docker.sh
 ```
 
-## Edit the variable,change the the variable of MASTER_IP to your master node IP address,and make sure to change the other variable (Master node and worker node)
+## Edit the variable,change the the variable of MASTER_IP to your master node IP address,and make sure to change the other variable (master node and worker node)
 ```bash
 sudo su
 vi variable.sh
