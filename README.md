@@ -94,4 +94,7 @@ kubeadm join 192.168.100.208:6443 --token 4niztf.rc6y0xfbnih81jxv \
         --discovery-token-ca-cert-hash sha256:b44d3ac51430f7e7dad4639e4a8eeb5f3f03769ed8319c26e437ff49915659d7
 ```
 
-
+## If you want to make a new cluster token,type this (master node)
+```bash
+kubeadm token create --print-join-command
+```
