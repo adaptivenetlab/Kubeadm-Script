@@ -55,7 +55,7 @@ cd kubeadm-script
 chmod +x ccluster.sh kubernetes.sh variable.sh docker.sh
 ```
 
-## Edit the variable,change the the variable of MASTER_IP to your master node IP address,and make sure to change the other variable (Master node)
+## Edit the variable,change the the variable of MASTER_IP to your master node IP address,and make sure to change the other variable (Master node and worker node)
 ```bash
 sudo su
 vi variable.sh
